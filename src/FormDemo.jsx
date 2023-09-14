@@ -1,5 +1,6 @@
 import TextField from '@mui/material/TextField';
 import Slider from '@mui/material/Slider';
+import Box from '@mui/material/Box';
 import { useState } from 'react';
 
 export const FormDemo = () => {
@@ -15,7 +16,13 @@ export const FormDemo = () => {
     }
 
     return (
-        <div>
+        <Box sx={{
+            border: '2px solid red',
+            width: 400,
+            height: 500,
+            p: 4,
+
+        }}>
             <h1>Input is: {value}</h1>
             <TextField
                 id="outlined-basic"
@@ -32,6 +39,6 @@ export const FormDemo = () => {
                 onChange={handleVolumeChange}
             />
 
-        </div>
+        </Box>
     )
 }
